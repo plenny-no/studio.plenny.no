@@ -26,15 +26,24 @@ export default {
 		},
 		{
 			name: "image",
-			type: "image",
-			options: {
-				hotspot: true,
-			},
+			type: "illustration",
 			validation: (Rule: any) => Rule.required(),
 		},
 		{
 			name: "link",
 			type: "link",
+		},
+		{
+			name: "imageAlignment",
+			type: "string",
+			options: {
+				list: [
+					{ title: "Left", value: "left" },
+					{ title: "Right", value: "right" },
+				],
+				layout: "radio",
+			},
+			validation: (Rule: any) => Rule.required(),
 		},
 	],
 	preview: {
