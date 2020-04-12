@@ -17,6 +17,7 @@ export default {
 		{
 			name: "sections",
 			type: "sections",
+			validation: (Rule: any) => Rule.required(),
 		},
 	],
 };
