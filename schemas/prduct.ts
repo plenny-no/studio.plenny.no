@@ -27,10 +27,7 @@ export default {
 			type: "array",
 			of: [
 				{
-					type: "image",
-					options: {
-						hotspot: true,
-					},
+					type: "illustration",
 				},
 			],
 		},
@@ -50,7 +47,7 @@ export default {
 		},
 		{
 			name: "defaultPrice",
-			type: "string",
+			type: "number",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,
 			fieldset: "shopify",

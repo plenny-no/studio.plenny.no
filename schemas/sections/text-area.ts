@@ -3,7 +3,6 @@ export default {
 	type: "object",
 	fields: [
 		{
-			title: "Text",
 			name: "text",
 			type: "array",
 			of: [

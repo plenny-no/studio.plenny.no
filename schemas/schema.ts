@@ -5,12 +5,28 @@ import createSchema from "part:@sanity/base/schema-creator";
 import Product from "./prduct";
 import Variant from "./variant";
 import Page from "./page";
+import FrontPage from "./front-page";
 
 // Sections
 import Sections from "./sections";
 import TextArea from "./sections/text-area";
+import CallToAction from "./sections/call-to-action";
+
+// Types
+import Illustration from "./types/illustration";
+import Link from "./types/link";
 
 export default createSchema({
 	name: "default",
-	types: schemaTypes.concat([Product, Variant, Page, Sections, TextArea]),
+	types: schemaTypes.concat([
+		Product,
+		Variant,
+		Page,
+		FrontPage,
+		Sections,
+		TextArea,
+		CallToAction,
+		Illustration,
+		Link,
+	]),
 });

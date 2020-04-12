@@ -1,9 +1,9 @@
 import EditIcon from "part:@sanity/base/edit-icon";
 import { StructureBuilder as S } from "@sanity/structure";
-import { FaShoppingCart, FaTags, FaLayerGroup } from "react-icons/fa";
+import { FaShoppingCart, FaTags, FaLayerGroup, FaHome } from "react-icons/fa";
 import JSONpreview from "./previews/json-preview";
 
-const hiddenTypes = ["product", "variant", "page"];
+const hiddenTypes = ["product", "variant", "page", "frontPage"];
 
 const products = S.listItem()
 	.title("Products")
@@ -31,10 +31,21 @@ const pages = S.listItem()
 	.schemaType("page")
 	.child(S.documentTypeList("page").title("Pages"));
 
+const fronPage = S.listItem()
+	.title("Front Page")
+	.icon(FaHome)
+	.child(
+		S.document()
+			.schemaType("frontPage")
+			.documentId("global-front-page")
+			.title("Front Page")
+	);
+
 export default () =>
 	S.list()
 		.title("Content")
 		.items([
+			fronPage,
 			pages,
 			products,
 			variants,
