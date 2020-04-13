@@ -1,5 +1,5 @@
 export default {
-	name: "advertisement",
+	name: "productList",
 	type: "object",
 	fields: [
 		{
@@ -16,7 +16,7 @@ export default {
 					options: { filter: `deleted != true` },
 				},
 			],
-			validation: (Rule: any) => Rule.max(3).min(1).required(),
+			validation: (Rule: any) => Rule.min(1).required(),
 		},
 	],
 	preview: {
@@ -24,7 +24,7 @@ export default {
 			subtitle: "header",
 		},
 		prepare: ({ subtitle }: { subtitle: string }) => ({
-			title: "Advertisement",
+			title: "Product List",
 			subtitle,
 		}),
 	},

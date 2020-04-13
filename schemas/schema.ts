@@ -13,6 +13,7 @@ import Sections from "./sections";
 import TextArea from "./sections/text-area";
 import CallToAction from "./sections/call-to-action";
 import Advertisement from "./sections/advertisement";
+import ProductList from "./sections/product-list";
 
 // Types
 import Illustration from "./types/illustration";
@@ -31,6 +32,7 @@ export default createSchema({
 		TextArea,
 		CallToAction,
 		Advertisement,
+		ProductList,
 		Illustration,
 		InternalLink,
 		ExternalLink,

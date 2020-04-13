@@ -5,5 +5,6 @@ export default {
 		{ type: "textArea" },
 		{ type: "callToAction" },
 		{ type: "advertisement" },
+		{ type: "productList" },
 	],
 };
