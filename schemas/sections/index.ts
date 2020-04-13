@@ -1,5 +1,9 @@
 export default {
 	name: "sections",
 	type: "array",
-	of: [{ type: "textArea" }, { type: "callToAction" }],
+	of: [
+		{ type: "textArea" },
+		{ type: "callToAction" },
+		{ type: "advertisement" },
+	],
 };
