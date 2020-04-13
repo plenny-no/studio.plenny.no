@@ -16,7 +16,7 @@ export default {
 					options: { filter: `deleted != true` },
 				},
 			],
-			validation: (Rule: any) => Rule.max(4).min(1).required(),
+			validation: (Rule: any) => Rule.max(3).min(1).required(),
 		},
 	],
 	preview: {
