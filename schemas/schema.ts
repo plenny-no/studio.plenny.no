@@ -15,7 +15,8 @@ import CallToAction from "./sections/call-to-action";
 
 // Types
 import Illustration from "./types/illustration";
-import Link from "./types/link";
+import InternalLink from "./types/internal-link";
+import ExternalLink from "./types/external-link";
 
 export default createSchema({
 	name: "default",
@@ -29,6 +30,7 @@ export default createSchema({
 		TextArea,
 		CallToAction,
 		Illustration,
-		Link,
+		InternalLink,
+		ExternalLink,
 	]),
 });

@@ -5,7 +5,7 @@ export default {
 		{
 			name: "navigation",
 			type: "array",
-			of: [{ type: "link" }],
+			of: [{ type: "internalLink" }, { type: "externalLink" }],
 		},
 		{
 			name: "footer",
@@ -35,7 +35,7 @@ export default {
 					name: "links",
 					fieldset: "links",
 					type: "array",
-					of: [{ type: "link" }],
+					of: [{ type: "internalLink" }, { type: "externalLink" }],
 				},
 			],
 		},

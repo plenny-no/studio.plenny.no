@@ -31,7 +31,7 @@ export default {
 		},
 		{
 			name: "link",
-			type: "link",
+			type: "internalLink",
 		},
 		{
 			name: "imageAlignment",
