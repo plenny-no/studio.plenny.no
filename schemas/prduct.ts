@@ -47,7 +47,7 @@ export default {
 		},
 		{
 			name: "defaultPrice",
-			type: "number",
+			type: "string",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,
 			fieldset: "shopify",
