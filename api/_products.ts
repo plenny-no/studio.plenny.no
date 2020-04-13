@@ -1,4 +1,4 @@
-import { ShopifyProduct, client } from "./_utils";
+import { ShopifyProduct, client, removeDecimals } from "./_utils";
 
 export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 	const product = {
@@ -7,7 +7,7 @@ export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 		title: data.title,
 		deleted: false,
 		productId: data.id.toString(),
-		defaultPrice: ((data.variants || [])[0] || {}).price || undefined,
+		defaultPrice: removeDecimals(((data.variants || [])[0] || {}).price),
 		vendor: data.vendor || undefined,
 		handle: {
 			_type: "slug",
@@ -24,8 +24,8 @@ export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 			_type: "reference",
 			_ref: variant.product_id.toString(),
 		},
-		price: variant.price,
-		compareAtPrice: variant.compare_at_price || undefined,
+		price: removeDecimals(variant.price),
+		compareAtPrice: removeDecimals(variant.compare_at_price || undefined),
 		inventoryQuantity: variant.inventory_quantity || undefined,
 		sku: variant.sku,
 	}));

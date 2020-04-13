@@ -43,6 +43,10 @@ export type ShopifyProduct = {
 	variants: ShopifyVariant[];
 };
 
+export function removeDecimals(price: string | undefined) {
+	return price ? price.split(".")[0] : price;
+}
+
 export async function isVerifiedRequest(request: NowRequest): Promise<boolean> {
 	const hmacHeader = request.headers["x-shopify-hmac-sha256"];
 
