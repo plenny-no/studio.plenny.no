@@ -6,6 +6,7 @@ import Product from "./prduct";
 import Variant from "./variant";
 import Page from "./page";
 import FrontPage from "./front-page";
+import Store from "./store";
 import Config from "./config";
 
 // Sections
@@ -27,6 +28,7 @@ export default createSchema({
 		Variant,
 		Page,
 		FrontPage,
+		Store,
 		Config,
 		Sections,
 		TextArea,

@@ -1,12 +1,7 @@
 export default {
-	name: "frontPage",
+	name: "store",
 	type: "document",
 	fields: [
-		{
-			name: "hero",
-			type: "illustration",
-			validation: (Rule: any) => Rule.required(),
-		},
 		{
 			name: "sections",
 			type: "sections",
@@ -14,7 +9,7 @@ export default {
 	],
 	preview: {
 		prepare: () => ({
-			title: "Front page",
+			title: "Store",
 		}),
 	},
 };

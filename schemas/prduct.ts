@@ -60,7 +60,7 @@ export default {
 			fieldset: "shopify",
 		},
 		{
-			name: "handle",
+			name: "slug",
 			type: "slug",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,

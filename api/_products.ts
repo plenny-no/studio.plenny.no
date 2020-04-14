@@ -9,7 +9,7 @@ export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 		productId: data.id.toString(),
 		defaultPrice: removeDecimals(((data.variants || [])[0] || {}).price),
 		vendor: data.vendor || undefined,
-		handle: {
+		slug: {
 			_type: "slug",
 			current: data.handle,
 		},

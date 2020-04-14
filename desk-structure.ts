@@ -5,11 +5,19 @@ import {
 	FaTags,
 	FaLayerGroup,
 	FaHome,
+	FaStore,
 	FaCog,
 } from "react-icons/fa";
 import JSONpreview from "./previews/json-preview";
 
-const hiddenTypes = ["product", "variant", "page", "frontPage", "config"];
+const hiddenTypes = [
+	"product",
+	"variant",
+	"page",
+	"frontPage",
+	"config",
+	"store",
+];
 
 const products = S.listItem()
 	.title("Products")
@@ -47,6 +55,13 @@ const fronPage = S.listItem()
 			.title("Front Page")
 	);
 
+const store = S.listItem()
+	.title("Store")
+	.icon(FaStore)
+	.child(
+		S.document().schemaType("store").documentId("global-store").title("Store")
+	);
+
 const config = S.listItem()
 	.title("Config")
 	.icon(FaCog)
@@ -62,6 +77,7 @@ export default () =>
 		.title("Content")
 		.items([
 			fronPage,
+			store,
 			pages,
 			products,
 			variants,
