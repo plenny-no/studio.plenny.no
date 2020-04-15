@@ -47,6 +47,13 @@ export function removeDecimals(price: string | undefined) {
 	return price ? price.split(".")[0] : price;
 }
 
+export function shopifyIdToStoreforntId(
+	id: string,
+	type: "Product" | "ProductVariant"
+) {
+	return Buffer.from(`gid://shopify/${type}/${id}`).toString("base64");
+}
+
 export async function isVerifiedRequest(request: NowRequest): Promise<boolean> {
 	const hmacHeader = request.headers["x-shopify-hmac-sha256"];
 

@@ -46,6 +46,13 @@ export default {
 			fieldset: "shopify",
 		},
 		{
+			name: "storefrontId",
+			type: "string",
+			description: "This comes from Shopify and cannot be changed",
+			readOnly: true,
+			fieldset: "shopify",
+		},
+		{
 			name: "defaultPrice",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",

@@ -1,4 +1,9 @@
-import { ShopifyProduct, client, removeDecimals } from "./_utils";
+import {
+	ShopifyProduct,
+	client,
+	removeDecimals,
+	shopifyIdToStoreforntId,
+} from "./_utils";
 
 export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 	const product = {
@@ -7,6 +12,7 @@ export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 		title: data.title,
 		deleted: false,
 		productId: data.id.toString(),
+		storefrontId: shopifyIdToStoreforntId(data.id.toString(), "Product"),
 		defaultPrice: removeDecimals(((data.variants || [])[0] || {}).price),
 		vendor: data.vendor || undefined,
 		slug: {
@@ -20,6 +26,10 @@ export async function addOrUpdateProduct(data: ShopifyProduct): Promise<void> {
 		_id: variant.id.toString(),
 		title: variant.title,
 		variantId: variant.id.toString(),
+		storefrontId: shopifyIdToStoreforntId(
+			variant.id.toString(),
+			"ProductVariant"
+		),
 		product: {
 			_type: "reference",
 			_ref: variant.product_id.toString(),

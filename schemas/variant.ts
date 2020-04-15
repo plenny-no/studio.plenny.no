@@ -37,7 +37,13 @@ export default {
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,
-			hidden: true,
+			fieldset: "shopify",
+		},
+		{
+			name: "storefrontId",
+			type: "string",
+			description: "This comes from Shopify and cannot be changed",
+			readOnly: true,
 			fieldset: "shopify",
 		},
 		{
