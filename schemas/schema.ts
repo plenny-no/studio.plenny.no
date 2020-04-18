@@ -8,6 +8,7 @@ import page from "./page";
 import frontpage from "./front-page";
 import store from "./store";
 import config from "./config";
+import article from "./article";
 
 // Sections
 import sections from "./sections";
@@ -31,6 +32,7 @@ export default createSchema({
 		frontpage,
 		store,
 		config,
+		article,
 		sections,
 		textarea,
 		calltoaction,

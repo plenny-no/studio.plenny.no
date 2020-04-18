@@ -10,7 +10,12 @@ export default {
 		{
 			name: "url",
 			type: "reference",
-			to: [{ type: "page" }, { type: "frontPage" }, { type: "store" }],
+			to: [
+				{ type: "page" },
+				{ type: "frontPage" },
+				{ type: "store" },
+				{ type: "article" },
+			],
 			validate: (Rule: any) => Rule.required(),
 		},
 	],

@@ -43,6 +43,7 @@ export default {
 											{ type: "page" },
 											{ type: "frontPage" },
 											{ type: "store" },
+											{ type: "article" },
 										],
 									},
 								],

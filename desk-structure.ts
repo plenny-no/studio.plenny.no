@@ -7,17 +7,9 @@ import {
 	FaHome,
 	FaStore,
 	FaCog,
+	FaRss,
 } from "react-icons/fa";
 import JSONpreview from "./previews/json-preview";
-
-const hiddenTypes = [
-	"product",
-	"variant",
-	"page",
-	"frontPage",
-	"config",
-	"store",
-];
 
 const products = S.listItem()
 	.title("Products")
@@ -72,20 +64,16 @@ const config = S.listItem()
 			.title("Config")
 	);
 
+const blog = S.listItem()
+	.title("Blog")
+	.icon(FaRss)
+	.schemaType("article")
+	.child(S.documentTypeList("article").title("Articles"));
+
 export default () =>
 	S.list()
 		.title("Content")
-		.items([
-			fronPage,
-			store,
-			pages,
-			products,
-			variants,
-			config,
-			...S.documentTypeListItems().filter(
-				(item) => !hiddenTypes.includes(item.getId() as string)
-			),
-		]);
+		.items([fronPage, store, pages, blog, products, variants, config]);
 
 export const getDefaultDocumentNode = () => {
 	return S.document().views([
