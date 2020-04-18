@@ -2,41 +2,43 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import createSchema from "part:@sanity/base/schema-creator";
 
 // Documents
-import Product from "./prduct";
-import Variant from "./variant";
-import Page from "./page";
-import FrontPage from "./front-page";
-import Store from "./store";
-import Config from "./config";
+import product from "./prduct";
+import variant from "./variant";
+import page from "./page";
+import frontpage from "./front-page";
+import store from "./store";
+import config from "./config";
 
 // Sections
-import Sections from "./sections";
-import TextArea from "./sections/text-area";
-import CallToAction from "./sections/call-to-action";
-import Advertisement from "./sections/advertisement";
-import ProductList from "./sections/product-list";
+import sections from "./sections";
+import textarea from "./sections/text-area";
+import calltoaction from "./sections/call-to-action";
+import advertisement from "./sections/advertisement";
+import productlist from "./sections/product-list";
 
 // Types
-import Illustration from "./types/illustration";
-import InternalLink from "./types/internal-link";
-import ExternalLink from "./types/external-link";
+import illustration from "./types/illustration";
+import internallink from "./types/internal-link";
+import externallink from "./types/external-link";
+import dataTable from "./types/data-table";
 
 export default createSchema({
 	name: "default",
 	types: schemaTypes.concat([
-		Product,
-		Variant,
-		Page,
-		FrontPage,
-		Store,
-		Config,
-		Sections,
-		TextArea,
-		CallToAction,
-		Advertisement,
-		ProductList,
-		Illustration,
-		InternalLink,
-		ExternalLink,
+		product,
+		variant,
+		page,
+		frontpage,
+		store,
+		config,
+		sections,
+		textarea,
+		calltoaction,
+		advertisement,
+		productlist,
+		illustration,
+		internallink,
+		externallink,
+		dataTable,
 	]),
 });
