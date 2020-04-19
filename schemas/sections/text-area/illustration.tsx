@@ -14,7 +14,7 @@ const wrapper = css`
 		border-radius: 0.25rem;
 	}
 
-	& > caption {
+	& > figcaption {
 		text-align: center;
 		font-size: 0.85rem;
 		color: darkgray;
@@ -32,7 +32,7 @@ const Illustration: React.FC<BlockEditorProps<Props>> = ({ value }) => {
 	return (
 		<figure css={wrapper}>
 			<img src={value?.imageUrl} alt={value?.alt} />
-			<caption>{value?.caption}</caption>
+			<figcaption>{value?.caption}</figcaption>
 		</figure>
 	);
 };
