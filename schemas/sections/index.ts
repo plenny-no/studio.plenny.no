@@ -1,4 +1,5 @@
 export default {
+	title: "Sections",
 	name: "sections",
 	type: "array",
 	of: [

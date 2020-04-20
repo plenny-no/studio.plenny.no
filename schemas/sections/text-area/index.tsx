@@ -4,10 +4,12 @@ import Illustration from "./illustration";
 import DataTable from "./data-table";
 
 export default {
+	title: "Text Area",
 	name: "textArea",
 	type: "object",
 	fields: [
 		{
+			title: "Text",
 			name: "text",
 			type: "array",
 			of: [

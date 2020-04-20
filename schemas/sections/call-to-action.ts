@@ -1,13 +1,16 @@
 export default {
+	title: "Call To Action",
 	name: "callToAction",
 	type: "object",
 	fields: [
 		{
+			title: "Title",
 			name: "title",
 			type: "string",
 			validation: (Rule: any) => Rule.required(),
 		},
 		{
+			title: "Text",
 			name: "text",
 			type: "array",
 			of: [
@@ -26,15 +29,18 @@ export default {
 			],
 		},
 		{
+			title: "Image",
 			name: "image",
 			type: "illustration",
 			validation: (Rule: any) => Rule.required(),
 		},
 		{
+			title: "Link",
 			name: "link",
 			type: "internalLink",
 		},
 		{
+			title: "Image Alignment",
 			name: "imageAlignment",
 			type: "string",
 			options: {

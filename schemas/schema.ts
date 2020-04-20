@@ -22,6 +22,7 @@ import illustration from "./types/illustration";
 import internallink from "./types/internal-link";
 import externallink from "./types/external-link";
 import dataTable from "./types/data-table";
+import seoMetadata from "./types/seo-metadata";
 
 export default createSchema({
 	name: "default",
@@ -42,5 +43,6 @@ export default createSchema({
 		internallink,
 		externallink,
 		dataTable,
+		seoMetadata,
 	]),
 });

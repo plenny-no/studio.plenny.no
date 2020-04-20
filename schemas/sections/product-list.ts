@@ -1,12 +1,15 @@
 export default {
+	title: "Product List",
 	name: "productList",
 	type: "object",
 	fields: [
 		{
+			title: "Header",
 			name: "header",
 			type: "string",
 		},
 		{
+			title: "Products",
 			name: "products",
 			type: "array",
 			of: [

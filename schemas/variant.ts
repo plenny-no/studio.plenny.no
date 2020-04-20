@@ -1,4 +1,5 @@
 export default {
+	title: "Variant",
 	name: "variant",
 	type: "document",
 	fieldsets: [
@@ -13,19 +14,21 @@ export default {
 	],
 	fields: [
 		{
+			title: "Title",
 			name: "title",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,
 		},
 		{
-			name: "sku",
 			title: "SKU",
+			name: "sku",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
 			readOnly: true,
 		},
 		{
+			title: "Product",
 			name: "product",
 			type: "reference",
 			to: [{ type: "product" }],
@@ -33,6 +36,7 @@ export default {
 			readOnly: true,
 		},
 		{
+			title: "Variant ID",
 			name: "variantId",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
@@ -40,6 +44,7 @@ export default {
 			fieldset: "shopify",
 		},
 		{
+			title: "Storefront ID",
 			name: "storefrontId",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
@@ -47,6 +52,7 @@ export default {
 			fieldset: "shopify",
 		},
 		{
+			title: "Price",
 			name: "price",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
@@ -54,6 +60,7 @@ export default {
 			fieldset: "shopify",
 		},
 		{
+			title: "Compare At Price",
 			name: "compareAtPrice",
 			type: "string",
 			description: "This comes from Shopify and cannot be changed",
@@ -61,6 +68,7 @@ export default {
 			fieldset: "shopify",
 		},
 		{
+			title: "Inventory Quantity",
 			name: "inventoryQuantity",
 			type: "number",
 			description: "This comes from Shopify and cannot be changed",

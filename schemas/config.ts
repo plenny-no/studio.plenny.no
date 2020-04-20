@@ -1,13 +1,16 @@
 export default {
+	title: "Config",
 	name: "config",
 	type: "document",
 	fields: [
 		{
+			title: "Navigation",
 			name: "navigation",
 			type: "array",
 			of: [{ type: "internalLink" }, { type: "externalLink" }],
 		},
 		{
+			title: "Footer",
 			name: "footer",
 			type: "object",
 			options: { collapsible: true, collapsed: false },
@@ -17,21 +20,25 @@ export default {
 			],
 			fields: [
 				{
+					title: "Twitter",
 					name: "twitter",
 					type: "url",
 					fieldset: "social",
 				},
 				{
+					title: "Instagram",
 					name: "instagram",
 					type: "url",
 					fieldset: "social",
 				},
 				{
+					title: "Facebook",
 					name: "facebook",
 					type: "url",
 					fieldset: "social",
 				},
 				{
+					title: "Links",
 					name: "links",
 					fieldset: "links",
 					type: "array",
@@ -40,6 +47,7 @@ export default {
 			],
 		},
 		{
+			title: "Advanced",
 			name: "advanced",
 			type: "array",
 			of: [

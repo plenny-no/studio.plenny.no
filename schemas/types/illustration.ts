@@ -1,4 +1,5 @@
 export default {
+	title: "Illustration",
 	name: "illustration",
 	type: "image",
 	options: {
