@@ -3,7 +3,8 @@
     "SANITY_API_TOKEN": "@sanity_api_token",
     "SANITY_PROJECT_ID": "@sanity_project_id",
     "SANITY_DATASET": "@sanity_dataset",
-    "SHOPIFY_SECRET": "@shopify_secret"
+    "SHOPIFY_SECRET": "@shopify_secret",
+    "SANITY_STUDIO_PREVIEW_TOKEN": "@preview_token"
   },
   "routes": [
     { "handle": "filesystem" },
